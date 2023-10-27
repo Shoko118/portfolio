@@ -4,9 +4,13 @@ const updateTime: string = "9 October 2023";
 
 type Link = "linkedin" | "github";
 
-export default function Navbar() {
+export default function Header() {
   function handleSocialLink(link: Link) {
-    if (link === "linkedin") window.open("", "_blank");
+    if (link === "linkedin")
+      window.open(
+        "https://www.linkedin.com/in/bryan-liaw-a92012227/",
+        "_blank"
+      );
 
     return window.open("https://github.com/Shoko118", "_blank");
   }

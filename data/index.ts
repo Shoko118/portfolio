@@ -27,7 +27,7 @@ export const projects: Project[] = [
   },
   {
     title: "Nextra NextJS Starter",
-    status: "production",
+    status: "code",
     href: "https://github.com/Shoko118/nextra-docs",
   },
 ];
