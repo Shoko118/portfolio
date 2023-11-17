@@ -1,4 +1,3 @@
-import Projects from "@/components/Projects";
 import TechStacks from "@/components/TechStacks";
 
 export default function HomePage() {
@@ -8,7 +7,6 @@ export default function HomePage() {
       <div className="">I built stuff</div>
 
       <TechStacks />
-      <Projects />
     </section>
   );
 }

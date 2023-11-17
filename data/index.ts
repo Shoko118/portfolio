@@ -1,4 +1,4 @@
-import { Project, Tech } from "./index.type";
+import { Tech } from "./index.type";
 
 export const techs: Tech[] = [
   { name: "Next JS", href: "https://nextjs.org/docs/app" },
@@ -17,17 +17,4 @@ export const techs: Tech[] = [
   { name: "React Embla Carousel", href: "https://www.embla-carousel.com/" },
   { name: "Prisma", href: "https://www.prisma.io/" },
   { name: "SWR", href: "https://swr.vercel.app/" },
-];
-
-export const projects: Project[] = [
-  {
-    title: "Prisma NextJS Starter",
-    status: "code",
-    href: "https://github.com/Shoko118/next-prisma-todo",
-  },
-  {
-    title: "Nextra NextJS Starter",
-    status: "code",
-    href: "https://github.com/Shoko118/nextra-docs",
-  },
 ];
