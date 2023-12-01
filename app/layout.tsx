@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     title: `Bryan Portfolio`,
     description: 'Bleeding Edge Techs with NEXT App',
     siteName: `Bryan Portfolio`,
-    url: 'https://bryan-portfolio.vercel.app',
+    url: 'https://bnext-portfolio.vercel.app/',
   },
   description: 'Bleeding Edge with NEXT APP',
-  metadataBase: new URL('https://bryan-portfolio.vercel.app'),
+  metadataBase: new URL('https://bnext-portfolio.vercel.app/'),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
