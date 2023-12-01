@@ -1,10 +1,10 @@
-import TechStacks from "@/components/TechStacks";
+import TechStacks from '@/components/TechStacks';
 
 export default function HomePage() {
   return (
-    <section className="">
-      <div>Hey lads👋, I'm Bryan</div>
-      <div>I built stuff</div>
+    <section>
+      <div className="animate-fade-up animate-ease-in-out animate-duration-600">Hey lads👋, I'm Bryan</div>
+      <div className="animate-fade-up animate-ease-in-out animate-duration-600">I built stuff</div>
 
       <TechStacks />
     </section>
