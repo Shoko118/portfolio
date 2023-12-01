@@ -1,6 +1,6 @@
 'use client';
 
-const updateTime: string = '9 October 2023';
+const updateTime: string = '1 December 2023';
 
 type Link = 'linkedin' | 'github';
 
