@@ -1,7 +1,5 @@
 'use client';
 
-const updateTime: string = '1 December 2023';
-
 type Link = 'linkedin' | 'github';
 
 export default function Header() {
@@ -21,10 +19,6 @@ export default function Header() {
         <div className="cursor-pointer" onClick={() => handleSocialLink('github')}>
           Github
         </div>
-      </div>
-
-      <div>
-        Last update: <span>{updateTime}</span>
       </div>
     </div>
   );
