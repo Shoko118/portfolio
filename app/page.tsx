@@ -1,3 +1,5 @@
+'use client';
+
 import Projects from '@/components/Projects';
 import TechStacks from '@/components/TechStacks';
 
@@ -9,7 +11,7 @@ export default function HomePage() {
 
       <TechStacks />
 
-      <div className="mt-20 mb-3 animate-fade-up animate-ease-in-out animate-duration-700">Projects</div>
+      <div className="mt-20 mb-3 animate-fade-up animate-ease-in-out animate-duration-700">Frontend Projects</div>
       <div className="w-full h-0.5 bg-white" />
       <Projects />
     </section>
