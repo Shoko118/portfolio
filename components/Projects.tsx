@@ -10,8 +10,10 @@ export default function Projects() {
             <div className="flex items-center">
               Built with:
               <div className="flex-wrap space-x-3 flex items-center">
-                {project.techies.map(item => (
-                  <div className="border border-white px-2 py-1 rounded-lg ml-3">{item}</div>
+                {project.techies.map((item, index) => (
+                  <div key={index} className="border border-white px-2 py-1 rounded-lg ml-3">
+                    {item}
+                  </div>
                 ))}
               </div>
             </div>
