@@ -1,10 +1,9 @@
 'use client';
 
 import { techs } from '@/data';
-import { Tech } from '@/data/index.type';
 
 export default function TechStacks() {
-  function openLink(url: Tech['href']): Window | null {
+  function openLink(url: string): Window | null {
     return window.open(url, '_blank');
   }
 
