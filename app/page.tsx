@@ -1,5 +1,3 @@
-'use client';
-
 import Projects from '@/components/Projects';
 import TechStacks from '@/components/TechStacks';
 

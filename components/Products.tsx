@@ -12,6 +12,7 @@ export default function Products() {
   const [title, setTitle] = useState<string>('');
 
   async function handleCreateProduct() {
+    setTitle('');
     await trigger(
       { title },
       {
