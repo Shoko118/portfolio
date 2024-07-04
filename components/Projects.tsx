@@ -6,8 +6,8 @@ export default function Projects() {
     <section className="animate-fade-up animate-ease-in-out animate-duration-600">
       <div className="flex flex-col mt-6 space-y-9 items-center mb-8">
         {projects.map((project, index) => (
-          <Link href={project.href}>
-            <div key={index} className="space-y-3 border-2 border-grey px-2 py-3 rounded-lg cursor-pointer hover:border-white">
+          <Link key={index} href={project.href}>
+            <div className="space-y-3 border-2 border-grey px-2 py-3 rounded-lg cursor-pointer hover:border-white">
               <div className="text-grey hover:text-white">{project.title}</div>
               <div className="flex items-center">
                 Built with:
