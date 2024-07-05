@@ -16,12 +16,16 @@ export default async function middleware(req: NextRequest) {
   const cookie = cookies().get('session')?.value;
   const session = await decrypt(cookie);
 
-  // 4. Redirect
-  if (isProtectedRoute && !session?.userId) {
+  // 4. Define redirection conditions
+  const isUnauthProtected = isProtectedRoute && !session?.userId;
+  const isAuthPublicRedirect = isPublicRoute && session?.userId && !path.startsWith('/project/form');
+
+  // 5. Redirect based on conditions
+  if (isUnauthProtected) {
     return NextResponse.redirect(new URL('/project/signup', req.nextUrl));
   }
 
-  if (isPublicRoute && session?.userId && !req.nextUrl.pathname.startsWith('/project/form')) {
+  if (isAuthPublicRedirect) {
     return NextResponse.redirect(new URL('/project/form', req.nextUrl));
   }
 
