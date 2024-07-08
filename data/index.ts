@@ -17,20 +17,30 @@ export const techs = [
   { name: 'React Embla Carousel', href: 'https://www.embla-carousel.com/' },
   { name: 'Prisma', href: 'https://www.prisma.io/' },
   { name: 'SWR', href: 'https://swr.vercel.app/' },
+  { name: 'Tailwind Variants', href: 'https://www.tailwind-variants.org/' },
 ] as const;
 
 export const projects = [
   {
     title: 'Todo App with SWR',
     techies: ['Javscript', 'TypeScript', 'Next', 'React', 'SWR', 'Tailwind CSS'],
-    description: 'A Frontend Todo application built with React and SWR for stale-while-revalidate, and The app features SWR is a strategy to first return the data from cache (stale), then send the fetch request (revalidate), and finally come with the up-to-date data.',
+    description:
+      'A Frontend Todo application built with React and SWR for stale-while-revalidate, and The app features SWR is a strategy to first return the data from cache (stale), then send the fetch request (revalidate), and finally come with the up-to-date data.',
     href: '/project/swr',
   },
   {
     title: 'Shopping Cart with Zustand',
     techies: ['Javscript', 'TypeScript', 'Next', 'React', 'Zustand'],
-    description: 'This shopping cart application, built with React and Next.js, utilizes Zustand for state management, enhancing performance with its dev tools and utilities API. The project showcases efficient state synchronization and debugging capabilities.',
+    description:
+      'This shopping cart application, built with React and Next.js, utilizes Zustand for state management, enhancing performance with its dev tools and utilities API. The project showcases efficient state synchronization and debugging capabilities.',
     href: '/project/zustand',
+  },
+  {
+    title: 'Authentication with JWT',
+    techies: ['Javscript', 'TypeScript', 'Next', 'React', 'Zod', 'Jose', 'bcrypt'],
+    description:
+      'A secure user authentication system using Next.js and React. Features JWT for session management, Zod for schema validation, and bcrypt for password hashing, highlighting best practices in web security and user data handling.',
+    href: '/project/signup',
   },
 ] as const;
 

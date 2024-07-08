@@ -8,9 +8,9 @@ import { redirect } from 'next/navigation';
 const key = new TextEncoder().encode('secret');
 
 // Encrypt - Signs a JSON Web Token (JWT) with the given payload,
-// using HS256 algorithm, setting expiration to 30 seconds.
+// using HS256 algorithm, setting expiration to 1 day.
 export async function encrypt(payload: SessionPayload) {
-  return new SignJWT(payload).setProtectedHeader({ alg: 'HS256' }).setIssuedAt().setExpirationTime('30s').sign(key);
+  return new SignJWT(payload).setProtectedHeader({ alg: 'HS256' }).setIssuedAt().setExpirationTime('1day').sign(key);
 }
 
 // Decrypt - Verifies the JWT's signature using HS256 algorithm.
@@ -30,7 +30,7 @@ export async function decrypt(session: string | undefined = '') {
 // stores it in a secure, HTTP-only cookie that expires in 1 hour,
 // and redirects to the home page.
 export async function createSession(userId: string) {
-  const expiresAt = new Date(Date.now() + 30 * 1000); // 30 seconds from now
+  const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000); // 1 day from now
   const session = await encrypt({ userId, expiresAt });
 
   cookies().set('session', session, {

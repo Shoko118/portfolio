@@ -1,13 +1,17 @@
 module.exports = {
-  arrowParens: "avoid",
-  htmlWhitespaceSensitivity: "strict",
-  printWidth: 1000,
+  arrowParens: 'avoid',
+  htmlWhitespaceSensitivity: 'strict',
+  printWidth: 120,
   semi: true,
   singleQuote: true,
   tabWidth: 2,
-  trailingComma: "all",
+  trailingComma: 'all',
   importOrderSeparation: false,
   importOrderSortSpecifiers: true,
   importOrderBuiltinModulesToTop: true,
-  importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
+  importOrderParserPlugins: [
+    'typescript',
+    'jsx',
+    'decorators-legacy',
+  ],
 };

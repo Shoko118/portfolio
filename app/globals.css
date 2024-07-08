@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  color: #ededec;
-  background-color: #161615;
+:root {
+  --dark-grey: hsl(240, 5%, 64.9%);
+}
+
+@layer base {
+  body {
+    color: #ededec;
+    background-color: #161615;
+  }
 }

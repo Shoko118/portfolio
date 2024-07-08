@@ -2,7 +2,7 @@
 
 import { useCreateProduct } from '@/services/mutations';
 import { useProduct, useUser } from '@/services/queries';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Products() {
   const userQuery = useUser();
@@ -30,9 +30,9 @@ export default function Products() {
   return (
     <div className="mt-5">
       <div>Username: {fullName}</div>
-      <div>Total Price: {productQuery.data?.[0]?.price}</div>
+      <div>Email: {userQuery.data?.email}</div>
 
-      <div className="mb-4">Product lists:</div>
+      <div className="mt-4 mb-1">Product lists:</div>
       <div>
         {productQuery.data?.map((item, index) => (
           <li key={index} className="list-decimal">

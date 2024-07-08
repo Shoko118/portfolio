@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Gabarito } from 'next/font/google';
 import { cn } from '@/lib';
 import Providers from './providers';
+import NextTopLoader from 'nextjs-toploader';
 
 const gabarito = Gabarito({
   subsets: ['latin'],
@@ -28,6 +29,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={cn(gabarito.className)}>
+        <NextTopLoader color="#FFFFFF" initialPosition={0.08} crawlSpeed={200} height={3} crawl={true} easing="ease" speed={200} />
+
         <Providers>
           <main className="max-w-[18rem] md:max-w-2xl lg:max-w-4xl mx-auto overflow-hidden">
             <Header />
