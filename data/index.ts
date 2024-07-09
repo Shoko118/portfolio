@@ -15,7 +15,7 @@ export const techs = [
   },
   { name: 'React Hook Form', href: 'https://react-hook-form.com/' },
   { name: 'React Embla Carousel', href: 'https://www.embla-carousel.com/' },
-  { name: 'Prisma', href: 'https://www.prisma.io/' },
+  { name: 'Drizzle ORM', href: 'https://orm.drizzle.team/' },
   { name: 'SWR', href: 'https://swr.vercel.app/' },
   { name: 'Tailwind Variants', href: 'https://www.tailwind-variants.org/' },
 ] as const;

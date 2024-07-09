@@ -2,12 +2,10 @@
 
 import { signup } from '@/actions/auth';
 import { Card, CardContent, CardFooter, CardHeader } from '@/packages/card';
-import { useFormState } from 'react-dom';
+import { useFormState, useFormStatus } from 'react-dom';
 
 export default function SignupPage() {
-  const [state, action, pending] = useFormState(signup, undefined);
-
-  console.log(state?.errors);
+  const [state, action] = useFormState(signup, undefined);
 
   return (
     <form className="space-y-3" action={action}>
@@ -34,9 +32,14 @@ export default function SignupPage() {
           {state?.errors?.password && <p className="text-red-400 mt-2">{state?.errors?.password}</p>}
         </CardContent>
         <CardFooter>
-          <button disabled={pending}>{pending ? 'Pending...' : 'Sign Up'}</button>
+          <SubmitButton />
         </CardFooter>
       </Card>
     </form>
   );
+}
+
+function SubmitButton() {
+  const status = useFormStatus();
+  return <button disabled={status.pending}>{status.pending ? 'Pending...' : 'Sign Up'}</button>;
 }

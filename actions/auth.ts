@@ -2,6 +2,7 @@
 
 import { createSession } from '@/lib/session';
 import { FormState, SignupFormSchema } from '@/types/auth-definition';
+import { wait } from '@/utils';
 import bcrypt from 'bcrypt';
 
 let userDatabase: Record<string, string> = {};
@@ -20,6 +21,8 @@ export async function signup(state: FormState, formData: FormData): Promise<Form
       errors: validatedFields.error.flatten().fieldErrors,
     };
   }
+
+  await wait(1000);
 
   // Generate a unique user ID
   const userId = `user_${Date.now()}`;

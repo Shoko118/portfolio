@@ -20,7 +20,11 @@ export default function CommercePage() {
               <div>{product.price}</div>
               <div>{product.title}</div>
 
-              {cartProducts.find(item => item.id === product.id) ? <ChangeQtyButton productId={product.id} /> : <button onClick={() => addProduct(product)}>Add to Cart</button>}
+              {cartProducts.find(item => item.id === product.id) ? (
+                <ChangeQtyButton productId={product.id} />
+              ) : (
+                <button onClick={() => addProduct(product)}>Add to Cart</button>
+              )}
             </div>
           ))}
         </div>
@@ -44,8 +48,6 @@ function Carts() {
     })),
   );
 
-  console.log();
-
   return (
     <div>
       <div>Total Cart: ${total}</div>
@@ -56,7 +58,11 @@ function Carts() {
             <div>{product.price}</div>
             <div>{product.title}</div>
             <button onClick={() => removeProduct(product.id)}>Delete</button>
-            {cartProducts.find(item => item.id === product.id) ? <ChangeQtyButton productId={product.id} /> : <button onClick={() => addProduct(product)}>Add to Cart</button>}
+            {cartProducts.find(item => item.id === product.id) ? (
+              <ChangeQtyButton productId={product.id} />
+            ) : (
+              <button onClick={() => addProduct(product)}>Add to Cart</button>
+            )}
           </div>
         ))}
       </div>
