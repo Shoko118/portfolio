@@ -27,6 +27,7 @@ export const projects = [
     description:
       'A Frontend Todo application built with React and SWR for stale-while-revalidate, and The app features SWR is a strategy to first return the data from cache (stale), then send the fetch request (revalidate), and finally come with the up-to-date data.',
     href: '/project/swr',
+    sourceCode: 'https://github.com/Shoko118/portfolio/blob/main/app/project/(public)/swr/page.tsx',
   },
   {
     title: 'Shopping Cart with Zustand',
@@ -34,6 +35,7 @@ export const projects = [
     description:
       'This shopping cart application, built with React and Next.js, utilizes Zustand for state management, enhancing performance with its dev tools and utilities API. The project showcases efficient state synchronization and debugging capabilities.',
     href: '/project/zustand',
+    sourceCode: 'https://github.com/Shoko118/portfolio/blob/main/app/project/(public)/zustand/page.tsx',
   },
   {
     title: 'Authentication with JWT',
@@ -41,6 +43,7 @@ export const projects = [
     description:
       'A secure user authentication system using Next.js and React. Features JWT for session management, Zod for schema validation, and bcrypt for password hashing, highlighting best practices in web security and user data handling.',
     href: '/project/signup',
+    sourceCode: 'https://github.com/Shoko118/portfolio/blob/main/app/project/(public)/signup/page.tsx',
   },
 ] as const;
 

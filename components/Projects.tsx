@@ -1,27 +1,49 @@
-import { projects } from '@/data';
-import Link from 'next/link';
+"use client";
+
+import { projects } from "@/data";
+import { MoveRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Projects() {
   return (
-    <section className="animate-fade-up animate-ease-in-out animate-duration-600">
-      <div className="flex flex-col mt-6 space-y-9 items-center mb-8">
+    <section className="animate-duration-600 animate-fade-up animate-ease-in-out">
+      <div className="mb-8 mt-6 flex flex-col items-center space-y-9">
         {projects.map((project, index) => (
-          <Link key={index} href={project.href}>
-            <div className="border-2 border-grey px-2 py-3 space-y-3 rounded-lg cursor-pointer hover:border-white">
-              <div className="text-grey hover:text-white">{project.title}</div>
+          <div key={index}>
+            <div className="border-grey space-y-3 rounded-lg border-2 px-2 py-3 hover:border-white">
+              <div className="text-grey hover:text-white">
+                {project.title} -{" "}
+                <Link
+                  href={project.sourceCode}
+                  className="cursor-pointer border-b border-b-white bg-gradient-to-r from-cyan-300 to-teal-500 bg-clip-text text-transparent"
+                >
+                  Souce Code
+                </Link>
+              </div>
               <div className="flex items-center">
                 Built with:
-                <div className="flex-wrap space-x-3 flex items-center">
+                <div className="flex flex-wrap items-center space-x-3">
                   {project.techies.map((item, index) => (
-                    <div key={index} className="border border-white px-2 py-1 rounded-lg ml-3">
+                    <div
+                      key={index}
+                      className="ml-3 rounded-lg border border-white px-2 py-1"
+                    >
                       {item}
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="text-grey hover:text-white text-base">{project.description}</div>
+              <div className="text-grey text-base hover:text-white">
+                {project.description}
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="invisible" />
+                <Link href={project.href}>
+                  <MoveRight className="cursor-pointer text-right" />
+                </Link>
+              </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </section>
