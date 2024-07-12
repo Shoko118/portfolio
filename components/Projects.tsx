@@ -39,7 +39,7 @@ export default function Projects() {
               </div>
               <div className="flex items-center justify-between">
                 <div className="invisible" />
-                <Link href={project.href} target="_blank">
+                <Link href={project.href}>
                   <MoveRight className="cursor-pointer text-right" />
                 </Link>
               </div>
