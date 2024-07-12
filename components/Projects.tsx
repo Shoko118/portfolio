@@ -15,6 +15,7 @@ export default function Projects() {
                 {project.title} -{" "}
                 <Link
                   href={project.sourceCode}
+                  target="_blank"
                   className="cursor-pointer border-b border-b-white bg-gradient-to-r from-cyan-300 to-teal-500 bg-clip-text text-transparent"
                 >
                   Souce Code
@@ -38,7 +39,7 @@ export default function Projects() {
               </div>
               <div className="flex items-center justify-between">
                 <div className="invisible" />
-                <Link href={project.href}>
+                <Link href={project.href} target="_blank">
                   <MoveRight className="cursor-pointer text-right" />
                 </Link>
               </div>
